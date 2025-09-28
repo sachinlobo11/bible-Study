@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* in your global styles (index.css or globals.css) */
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+footer h2 {
+  text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+/*
+* {
+  outline: 1px solid red;
+}*/
+/* Glassmorphism helpers */
+.glass {
+  @apply bg-glass backdrop-blur-md dark:bg-white/5 shadow-glass border border-white/10;
+}
+
+/* Simple particles using radial gradients */
+.quiz-particles::before,
+.quiz-particles::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.08) 0, rgba(255,255,255,0.0) 60%),
+    radial-gradient(circle at 80% 40%, rgba(255,255,255,0.08) 0, rgba(255,255,255,0.0) 55%),
+    radial-gradient(circle at 40% 70%, rgba(255,255,255,0.06) 0, rgba(255,255,255,0.0) 50%);
+  pointer-events: none;
+}
+.quiz-particles::after { filter: blur(6px); }
+
+@keyframes shimmer {
+  0% {
+    background-position: -500px 0;
+  }
+  100% {
+    background-position: 500px 0;
+  }
+}
+
+.shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(80, 80, 80, 0.2) 25%,
+    rgba(160, 160, 160, 0.3) 50%,
+    rgba(80, 80, 80, 0.2) 75%
+  );
+  background-size: 1000px 100%;
+  animation: shimmer 1.6s infinite;
+}
+
+/* Markdown table styling */
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.prose table th,
+.prose table td {
+  border: 1px solid rgba(255, 255, 255, 0.2); /* light lines */
+  padding: 0.5rem 0.75rem;
+}
+
+.prose table th {
+  background-color: rgba(255, 255, 255, 0.1);
+  font-weight: 600;
+}
+
+/* Markdown table styling */
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #111; /* deep black */
+}
+
+.prose table th,
+.prose table td {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.6rem 0.75rem;
+}
+
+.prose table th {
+  background-color: #222; /* dark grey header */
+  font-weight: 600;
+}
+
+.prose table tr:nth-child(even) td {
+  background-color: #1a1a1a; /* zebra striping */
+}

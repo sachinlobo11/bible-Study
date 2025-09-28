@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Glassmorphism helpers */
+.glass {
+  @apply bg-glass backdrop-blur-md dark:bg-white/5 shadow-glass border border-white/10;
+}
+
+/* Simple particles using radial gradients */
+.quiz-particles::before,
+.quiz-particles::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 30%, rgba(255,255,255,0.08) 0, rgba(255,255,255,0.0) 60%),
+    radial-gradient(circle at 80% 40%, rgba(255,255,255,0.08) 0, rgba(255,255,255,0.0) 55%),
+    radial-gradient(circle at 40% 70%, rgba(255,255,255,0.06) 0, rgba(255,255,255,0.0) 50%);
+  pointer-events: none;
+}
+.quiz-particles::after { filter: blur(6px); }
