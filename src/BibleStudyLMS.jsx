@@ -312,12 +312,12 @@ export default function BibleStudyLMS() {
   React.useEffect(() => {
     async function fetchStudies() {
       try {
-        const res = await fetch("http://192.168.1.41:3000/api/studies", {
+        const res = await fetch("https://backend-biblestudy.vercel.app/api/studies", {
           method: "GET", // or "POST", "PUT", etc.
           headers: {
             "Content-Type": "application/json", // Specify the content type
-            "Authorization": "Bearer your-token-here", // Example of an authorization header
-            "Access-Control-Allow-Origin": "http://localhost:5173",//append,Add any custom headers if needed
+            "Authorization": "Bearer **********yiyi**", // Example of an authorization header
+            "Access-Control-Allow-Origin": "https://bible-study-xi.vercel.app",//append,Add any custom headers if needed
           }
         });
 
