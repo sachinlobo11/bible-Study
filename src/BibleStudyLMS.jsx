@@ -312,7 +312,7 @@ export default function BibleStudyLMS() {
   React.useEffect(() => {
     async function fetchStudies() {
       try {
-        const res = await fetch("https://backend-biblestudy.vercel.app/api/studies", {
+        const res = await fetch("/api/studies", {
           method: "GET", // or "POST", "PUT", etc.
           headers: {
             "Content-Type": "application/json", // Specify the content type
