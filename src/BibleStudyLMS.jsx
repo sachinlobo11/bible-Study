@@ -294,7 +294,7 @@ export default function BibleStudyLMS() {
         const { data, error } = await supabase
           .from("anou")
           .select("content")
-          .order("id", { ascending: false })
+          .order("created_at", { ascending: false })
           .limit(1)
           .single();
 
