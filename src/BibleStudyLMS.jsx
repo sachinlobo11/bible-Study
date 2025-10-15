@@ -519,7 +519,7 @@ if (aiMode) {
           ) : (filtered.map(s => (
             <article key={s.id} className="glass rounded-2xl overflow-hidden hover:shadow-xl transition-shadow">
               <div className="relative">
-                <img src={s.thumb} alt="thumbnail" className="h-40 w-full object-cover" />
+                <img src={s.thumbnail} alt="thumbnail" className="h-40 w-full object-cover" />
                 <div className="absolute top-2 right-2 glass px-2 py-1 rounded-lg text-xs">{s.duration}</div>
               </div>
               <div className="p-4">
