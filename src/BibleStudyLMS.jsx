@@ -136,6 +136,7 @@ function Markdown({ text }) {
       .replace(/^## (.*$)/gim, '<h2 class="text-xl font-bold mt-4">$1</h2>')
       .replace(/^# (.*$)/gim, '<h1 class="text-2xl font-bold mt-4">$1</h1>')
       .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      .replace(/^\* \*\*(.*?)\*\*/gim, '<li><strong>$1</strong></li>')
       .replace(/^---$/gm, '<hr class="my-4 border-white/20"/>')
       .replace(/^\* \*\*(.*?)\*\*/gim, '<li><strong>$1</strong></li>')
       .replace(/\*(.*?)\*/g, '<em>$1</em>')
